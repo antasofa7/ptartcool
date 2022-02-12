@@ -27,8 +27,16 @@ body {
     background-color: var(--background-color);
 }
 
+header {
+    padding-top: 36px;
+}
+
+section {
+    padding-top: 46px;
+}
+
 .container {
-    margin: 36px 16px 0 16px;
+    margin: 0 16px;
 }
 
 /* start navbar */
@@ -46,15 +54,17 @@ body {
 
 .navbar.sticky {
     background-color: var(--primary-color);
+    height: 40px;
 }
 
 .navbar.sticky .logo {
     color: var(--background-color);
+    font-size: 1.5rem;
 }
 
 .navbar .logo {
     font-family: var(--heading-font);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--primary-color);
 }
@@ -235,6 +245,26 @@ body {
 }
 /* end header swiper */
 
+/* start chat */
+.chat {
+    position: fixed;
+    z-index: 13;
+    bottom: 1rem;
+    right: 0;
+}
+
+.chat .container {
+    background-color: var(--background-color);
+    border-radius: 50%;
+    box-shadow: 1px 4px 10px rgba(1, 50, 44, .2);
+}
+
+.chat .container i {
+    font-size: 2.5rem;
+    padding: 7px;
+    color: var(--accent-color);
+}
+
 /* start products section */
 .wrapper-title {
     display: flex;
@@ -312,6 +342,11 @@ body {
     color: var(--primary-color);
 }
 
+.products .col .name i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
 .products .other .gradient {
     position: absolute;
     z-index: 1;
@@ -345,7 +380,7 @@ body {
 
 .projectSwiper .swiper-slide img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -411,6 +446,7 @@ body {
 
 /* start footer */
 .footer {
+    margin-top: 36px;
     padding: 0;
     background-color: var(--primary-color);
     color: var(--background-color);
@@ -420,7 +456,7 @@ body {
 
 .footer .row1 {
     display: flex;
-    padding: 32px 0;
+    padding: 32px 0 16px 0;
     gap: 12px;
 }
 
@@ -428,9 +464,18 @@ body {
     width: 50%;
 }
 
-.footer .row1 .map img {
+.footer .row1 .map {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+}
+
+.footer .row1 .gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
 }
 
 .footer .row1 .about, .footer .row1 .heading {
@@ -454,7 +499,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
 }
 
 .footer .row2 .logo {
@@ -478,14 +522,26 @@ body {
 
 /* tablet screen */
 @media screen and (min-width: 768px) {
+    section {
+        padding-top: 56px;
+    }
+
     .container {
-        margin: 54px 24px 0 24px;
+        margin: 0 24px;
     }
 
     /* start navbar */
     .navbar {
         height: 80px;
         width: 100%;
+    }
+
+    .navbar.sticky {
+        height: 56px;
+    }
+
+    .navbar.sticky .logo {
+        font-size: 1.75rem;
     }
 
     .headerSwiper {
@@ -550,6 +606,10 @@ body {
         font-weight: 600;
     }
 
+    .products .col .name i {
+        font-size: 2.3rem;
+    }
+
     .products .col .name.other-product {
         top: calc(50% - 10%);
         left: calc(50% - 35%);
@@ -580,8 +640,11 @@ body {
     /* end clients */
 
     /* start footer */
+    .footer {
+        margin-top: 56px;
+    }
+
     .footer .row1 {
-        padding: 36px 0;
         gap: 32px;
     }
 
@@ -625,8 +688,12 @@ body {
 
 /* laptop screen */
 @media screen and (min-width: 992px) {
+    section {
+        padding-top: 86px;
+    }
+
     .container {
-        margin: 42px 100px 0 100px;
+        margin: 0 100px;
     }
 
     /* start navbar */
@@ -634,6 +701,10 @@ body {
         height: 100px;
         width: 100%;
         padding: 0 100px;
+    }
+
+    .navbar.sticky {
+        height: 80px;
     }
 
     .navbar .toggle-menu { 
@@ -704,7 +775,7 @@ body {
     }
 
     .products .row {
-        grid-template-columns: 32% 32% 32%;
+        grid-template-columns: 32.15% 32.15% 32.15%;
         gap: 16px;
     }
 
@@ -718,6 +789,10 @@ body {
 
     .products .col .name {
         font-size: 1rem;
+    }
+
+    .products .col .name i {
+        font-size: 2.5rem;
     }
 
     .products .col .name.other-product {
@@ -762,9 +837,13 @@ body {
     /* end clients */
 
     /* start footer */
+    .footer {
+        margin-top: 86px;
+    }
+    
     .footer .row1 {
         display: flex;
-        padding: 32px 0 16px 0;
+        padding: 32px 0;
         gap: 42px;
     }
 
@@ -783,7 +862,7 @@ body {
 /* large screen */
 @media screen and (min-width: 1400px) {
     .container {
-        margin: 100px 200px 0 200px;
+        margin: 0 200px;
     }
 
     /* start navbar */
