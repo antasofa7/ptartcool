@@ -168,11 +168,11 @@ section {
 }
 /* end chat section */
 
-/* start products section */
+/* start projects section */
 .wrapper-title {
     display: flex;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 }
 
 .title {
@@ -194,34 +194,20 @@ section {
     border-bottom: 3px solid var(--primary-color);
 }
 
-.products .row {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 12px;
-}
-
-.products .row .col {
-    position: relative;
+.projects .row {
+    margin-bottom: 24px;
     width: 100%;
-    height: auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 1px 4px 10px rgba(1, 50, 44, .2);
     cursor: pointer;
     animation: fadeProduct .8s ease-in both;
 }
 
-.products .row .col:nth-child(2) {
+.projects .row:nth-child(2) {
     animation-delay: .8s;
 }
-.products .row .col:nth-child(3) {
+.projects .row:nth-child(3) {
     animation-delay: 1.6s;
-}
-.products .row .col:nth-child(4) {
+}.projects .row:nth-child(4) {
     animation-delay: 2.4s;
-}
-.products .row .col:nth-child(5) {
-    animation-delay: 3.0s;
 }
 
 @keyframes fadeProduct {
@@ -235,21 +221,29 @@ section {
     }
 }
 
-.products .col img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform .5s ease;
-}
-
-.products .col .name {
+.projects .row .heading {
     text-align: center;
-    font-family: var(--body-font);
+    font-family: var(--heading-font);
     font-size: 1rem;
     font-weight: 600;
     color: var(--primary-color);
+    margin-bottom: 8px;
 }
-/* end product */
+
+.projects .row .keterangan {
+    font-family: var(--body-font);
+    font-size: .75rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.projects .row img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+/* end projects */
 
 /* start footer */
 .footer {
@@ -351,39 +345,28 @@ section {
         font-size: 1.75rem;
     }
     
-    /* start products section */
+    /* start projects section */
     .wrapper-title {
-        margin-bottom: 32px;
+        margin-bottom: 42px;
     }
 
     .title {
         font-size: 1.5rem;
     }
-    
-    .products .row {
-        grid-template-columns: 49% 49%;
-        gap: 16px;
+
+    .projects .row {
+        margin-bottom: 32px;
     }
 
-    .products .row .col {
-        padding: 20px;
+    .projects .row .heading {
+        font-size: 1.25rem;
+        margin-bottom: 12px;
     }
 
-    .products .col .name {
-        padding-top: 24px;
-        font-size: 1rem;
-        font-weight: 600;
+    .projects .row .keterangan {
+        font-size: .875rem;
     }
-
-    .products .col .name i {
-        font-size: 2.3rem;
-    }
-
-    .products .col .name.other-product {
-        top: calc(50% - 10%);
-        left: calc(50% - 35%);
-        font-size: 1.5rem;
-    }
+    /* end projects section */
 
     /* start footer */
     .footer {
@@ -482,37 +465,6 @@ section {
     }
     /* end navbar */
 
-    /* start products */
-    .wrapper-title {
-        margin-bottom: 42px;
-    }
-
-    .products .row {
-        grid-template-columns: 32.15% 32.15% 32.15%;
-        gap: 16px;
-    }
-
-    .products .col:hover img {
-        transform: scale(1.2);
-    }
-
-    .title {
-        font-size: 1.5rem;
-    }
-
-    .products .col .name {
-        font-size: 1rem;
-    }
-
-    .products .col .name i {
-        font-size: 2.5rem;
-    }
-
-    .products .col .name.other-product {
-        left: calc(50% - 35%);
-        font-size: 1.25rem;;
-    }
-
     /* start footer */
     .footer {
         margin-top: 86px;
@@ -549,29 +501,11 @@ section {
     }
     /* end navbar */
 
-    /* start products */
-    .wrapper-title {
-        margin-bottom: 56px;
-    }
-
+    /* start projects */
     .title {
         font-size: 1.75rem;
     }
-
-    .products .row {
-        grid-template-columns: 24% 24% 24% 24%;
-        gap: 20px;
-    }
-
-    .products .col .name {
-        font-size: 1.25rem;
-    }
-
-    .products .col .name.other-product {
-        left: calc(50% - 35%);
-        font-size: 1.5rem;;
-    }
-    /* end products */
+    /* end projects */
     
     /* start footer */
     .footer .row1 {
