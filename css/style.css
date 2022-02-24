@@ -510,7 +510,7 @@ section {
 /* start clients */
 .clients .row {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     padding: 16px;
     border-radius: 5px;
@@ -737,7 +737,7 @@ section {
 
     /* start clients */
     .clients .row {
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: repeat(5, 1fr);
     }
     /* end clients */
 
@@ -950,7 +950,7 @@ section {
 
     /* start clients */
     .clients .row {
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: repeat(6, 1fr);
         gap: 20px;
         padding: 16px 24px;
     }
