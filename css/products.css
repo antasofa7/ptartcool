@@ -240,6 +240,7 @@ section {
     height: auto;
     object-fit: cover;
     transition: transform .5s ease;
+    filter: drop-shadow(1px 3px 4px rgba(1, 50, 44, .5));
 }
 
 .products .col .name {

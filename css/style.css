@@ -58,15 +58,28 @@ section {
 }
 
 .navbar.sticky .logo {
-    color: var(--background-color);
-    font-size: 1.5rem;
+    height: 1.5rem;
+}
+
+.navbar.sticky .logo .logo-color {
+    display: none;
 }
 
 .navbar .logo {
-    font-family: var(--heading-font);
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--primary-color);
+    height: 2rem;
+}
+
+.navbar .logo .logo-white {
+    display: none;
+}
+
+.navbar.sticky .logo .logo-white {
+    display: block;
+}
+
+.navbar .logo img {
+    height: 100%;
+    width: auto;
 }
 
 @media screen and (max-width: 991px) {
@@ -108,7 +121,7 @@ section {
 }
 
 .navbar .menu .nav-item .nav-link {
-    margin: 20px;
+    margin: 6px 20px 20px 20px;
     font-family: var(--heading-font);
     font-size: 1.25rem;
     font-weight: 400;
@@ -149,6 +162,7 @@ section {
 .headerSwiper .swiper-slide img {
     height: 100%;
     width: auto;
+    filter: drop-shadow(1px 3px 4px rgba(1, 50, 44, .5));
 }
 
 .headerSwiper .swiper-slide .gradient {
@@ -382,6 +396,13 @@ section {
     height: auto;
     object-fit: cover;
     transition: transform .5s ease;
+    filter: drop-shadow(1px 3px 4px rgba(1, 50, 44, .5));
+}
+
+.products .other img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    filter: none;
 }
 
 .products .col .name {
@@ -489,11 +510,16 @@ section {
 /* start clients */
 .clients .row {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     gap: 16px;
     padding: 16px;
     border-radius: 5px;
     box-shadow: 1px 4px 10px rgba(1, 50, 44, .2);
+}
+
+.clients .col {
+    display: flex;
+    align-items: center;
 }
 
 .clients .col img {
@@ -560,10 +586,12 @@ section {
 }
 
 .footer .row2 .logo {
-    font-family: var(--heading-font);
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: var(--background-color);
+    height: 1.5rem;
+}
+
+.footer .row2 .logo img {
+    height: 100%;
+    width: auto;
 }
 
 .footer .row2 .copyright {
@@ -599,7 +627,11 @@ section {
     }
 
     .navbar.sticky .logo {
-        font-size: 1.75rem;
+        height: 2rem;
+    }
+    
+    .navbar .logo {
+        height: 2.5rem;
     }
 
     .headerSwiper {
@@ -743,7 +775,7 @@ section {
     }
 
     .footer .row2 .logo {
-        font-size: 1.75rem;
+        height: 2rem;
     }
 
     .footer .row2 .copyright {
