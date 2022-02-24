@@ -562,7 +562,7 @@ section {
     border-radius: 5px;
 }
 
-.footer .row1 .about, .footer .row1 .heading {
+.footer .row1 .product, .footer .row1 .heading {
     display: none;
 }
 
@@ -750,7 +750,7 @@ section {
         gap: 32px;
     }
 
-    .footer .row1 .about, .footer .row1 .heading {
+    .footer .row1 .product, .footer .row1 .heading {
         display: block;
     }
     
@@ -767,6 +767,11 @@ section {
     .footer .row1 p, .footer .row1 i {
         font-size: 1rem;
         font-weight: 400;
+    }
+
+    .footer .row1 .product p a {
+        color: var(--background-color);
+        text-decoration: underline;
     }
     
     .footer .row1 .col p.address {
